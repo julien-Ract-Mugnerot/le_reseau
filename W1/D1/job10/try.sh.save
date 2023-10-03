@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Chemin vers les fichiers d'inventaire
+inventory_file="inventory.txt"
+current_inventory_file="current_inventory.txt"
+inventory_report_file="inventory_report.txt"
+
+# Vérifier si le fichier d'inventaire courant existe
+if [ ! -e "$current_inventory_file" ]; then
+    touch "$current_inventory_file"
+fi
+
+# Parcourir le fichier inventory.txt ligne par ligne
+while IFS= read -r line; do
+    # Extraire le titre du livre et la quantité en stock
+    title=$(echo "$line" | cut -d ',' -f 1)
+    quantity=$(echo "$line" | cut -d ',' -f 2)
+
+    # Vérifier si le livre existe déjà dans current_inventory.txt
+    if grep -q "^$title," "$current_inventory_file"; then
+        # Mettre à jour la quantité du livre dans current_inventory.txt
+        sed -i "s/^$title,.*/$title,$quantity/" "$current_inventory_file"
+    else
+        # Ajouter le livre à inventory_report.txt
+        echo "$title,$quantity" >> "$inventory_report_file"
+    fi
+done < "$inventory_file"
+echo "$"inventory_file"inventory_report_file

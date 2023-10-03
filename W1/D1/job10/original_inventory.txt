@@ -1,0 +1,41 @@
+Book Title,Quantity,Unit Price
+The Great Gatsby,50,10.99
+To Kill a Mockingbird,30,8.75
+1984,25,7.50
+Pride and Prejudice,40,9.25
+Lord of the Rings,20,12.00
+The Odyssey,60,11.50
+The Catcher in the Rye,35,8.99
+Brave New World,28,7.75
+Fahrenheit,51,22,9.50
+The Hobbit,45,10.25
+Animal Farm,30,7.75
+Jane Eyre,27,8.50
+Wuthering Heights,18,7.25
+Moby Dick,16,12.99
+The Adventures of Huckleberry Finn,33,9.75
+The Grapes of Wrath,29,8.50
+Frankenstein,21,7.99
+The Picture of Dorian Gray,17,10.50
+The Count of Monte Cristo,40,11.25
+War and Peace,50,9.99
+Dracula,25,8.25
+Alice in Wonderland,36,7.75
+The Scarlet Letter,19,9.00
+What the Day Owes the Night,15,12.39
+The Allegory of the Cave,8,5.95
+To the Lighthouse,32,8.99
+The Sun Also Rises,23,7.50
+Crime and Punishment,28,9.25
+Heart of Darkness,19,12.00
+One Hundred Years of Solitude,42,11.50
+The Brothers Karamazov,27,8.99
+Catch,22,31,7.75
+The Old Man and the Sea,25,9.50
+Ulysses,18,10.25
+Pachinko,29,7.75
+The Kite Runner,24,8.50
+The Alchemist,35,7.25
+Les Misérables,37,10.75
+Anna Karenina,26,8.25
+Great Expectations,33,9.00

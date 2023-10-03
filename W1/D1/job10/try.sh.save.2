@@ -1,0 +1,43 @@
+
+#!/bin/bash
+echo >Title, Quantity, Price
+# Paths
+inventory_file="inventory.txt"
+current_inventory_file="current_inventory.txt"
+inventory_report_file"inventory_report.txt"
+
+# Split
+while IFS= read -r line; do
+    title=$(echo "$line" | cut -d ',' -f 1)
+    quantity=$(echo "$line" | cut -d ',' -f 2)
+    price=$(echo "$line" | cut -d ',' -f 3)
+
+    # Check book existence's
+    if grep "^$title," current_inventory.txt; then
+        # update
+	echo $price
+        sed -i "s/^$title,.*/$title,$quantity/,$price/" current_inventory.txt
+    else
+        # Add book to inventory_report.txt
+	echo $quantity
+        echo "$title,$quantity,$price" >> inventory_report.txt
+    fi
+done < inventory.txt
+echo " ------- "
+cat inventory_report.txt
+sort Book Title,Quantity,Unit Price
+The Picture of Dorian Gray,6,10.50
+The Count of Monte Cristo,5,11.25
+Moby Dick,20,12.99
+The Odyssey,1,11.50
+War and Peace,10,9.99
+Dracula,3,8.25
+The Great Gatsby,0,10.99
+To Kill a Mockingbird,0,8.75
+1984,9,7.50
+The Sun Also Rises,2,7.50
+Crime and Punishment,8,9.25
+Heart of Darkness,1,12.00
+One Hundred Years of Solitude,12,11.50
+The Brothers Karamazov,7,8.99
+
